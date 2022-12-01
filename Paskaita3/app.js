@@ -5,44 +5,30 @@ const PORT = 3000;
 
 app.use(cors())
 
-const CARS = [
-    {id: 1, brand: 'BMW', model: '3', year: '2010', color: 'white'},
-    {id: 2, brand: 'Audi', model: 'a3', year: '2015', color: 'red'}
+const TASKS = [
+    {id: 1, title: 'Isplauti indus', isDone: false},
+    {id: 2, title: 'somtin else', isDone: false},
+    {id: 3, title: 'do someting', isDone: false},
+    {id: 4, title: 'do someting 3', isDone: false}
 ]
 
 
-const USERS = [
-    {id: 1, name: "Alex"},
-    {id: 2, name: "Rose"},
-    {id: 2, name: "Roze"},
-    {id: 2, name: "Roadkills"},
-    {id: 2, name: "Somroze"},
-    {id: 2, name: "Somting"},
-    {id: 3, name: "Else"}
-]
-
-app.get('/api/cars', (request, response) =>{
-    response.send(CARS);
+app.get('/api/tasks', (req, res) => {
+    res.send(TASKS);
 });
-app.get('/api/cars/:id', (request, response) =>{
-    const id = Number(request.params.id);
+app.get('/api/tasks/:id', (req, res) => {
+    const id = Number(req.params.id);
+    const task = TASKS.find((task) => task.id === id);
 
-    const car = CARS.find((car) => car.id === id);
-
-    if (!car) {
-        response.status(400).send('Car was not found');
+    if (!task) {
+        res.status(400).send('Task was not found');
     }
 
-    response.send(car)
+
+    res.send(task);
+
 });
 
 
-
-app.get('/api/names/:stringStart', (req, res) => {
-    const stringStart = req.params.stringStart.toLowerCase();
-
-    const filteredUsers = USERS.filter((user) => user.name.toLowerCase().indexOf(stringStart) === 0);
-    res.send(filteredUsers);
-});
 
 app.listen(PORT, () => console.log(`App is running on port ${PORT}`));

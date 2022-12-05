@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "nodemon": "nodemon app.js",
-    "start-3": "nodemon Paskaita3/app.js"
+    "start-3": "nodemon Paskaita3/app.js",
+    "start-4": "nodemon Paskaita4/app.js"
   },
   "keywords": [],
   "author": "",

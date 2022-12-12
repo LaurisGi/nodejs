@@ -6,14 +6,19 @@
   "scripts": {
     "nodemon": "nodemon app.js",
     "start-3": "nodemon Paskaita3/app.js",
-    "start-4": "nodemon Paskaita4/app.js"
+    "start-4": "nodemon Paskaita4/app.js",
+    "start-5": "nodemon Paskaita5/app.js",
+    "start-6": "nodemon Paskaita6/app.js",
+    "start-8": "nodemon Paskaita8/app.js",
+    "start-9": "nodemon Paskaita9/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongoose": "^6.8.0"
   },
   "devDependencies": {
     "eslint": "^8.28.0",

@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "638f74d4d62a26408b1d5388"
+  },
+  "brand": "Audi",
+  "year": "2010",
+  "price": "4800",
+  "model": "A6"
+},{
+  "_id": {
+    "$oid": "638f75d4d62a26408b1d538a"
+  },
+  "brand": "BMW",
+  "model": "320",
+  "year": "2010",
+  "price": "9689"
+},{
+  "_id": {
+    "$oid": "638f7654d62a26408b1d538c"
+  },
+  "brand": "Audi",
+  "year": "2008",
+  "price": "4000",
+  "model": "A6"
+}]

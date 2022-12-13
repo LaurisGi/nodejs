@@ -74,13 +74,31 @@ router.post('/users', async (req, res) => {
     res.send(users);
 });
 
+router.get('/adverts', async (req, res) => {
+    const adverts = await advertModel.find();
+    res.send(adverts);
+})
+
 router.post('/adverts', async (req, res) => {
-    const { model, brand, price } = req.body;
-    await advertModel.create({ model, brand, price });
+    const { brand, model, price, user_id } = req.body;
+    await advertModel.create({ brand, model, price, user_id });
     const adverts = await advertModel.find();
     res.send(adverts);
 });
 
+router.patch('/adverts/:id', async (req, res) => {
+    const { id } = req.params;
+    // const { brand, model, price, user_id } = req.body;
+    await advertModel.updateOne({ _id: id }, req.body);
+    const adverts = await advertModel.find();
+    res.send(adverts);
+})
+router.delete('/adverts/:id', async (req, res) => {
+    const { id } = req.params;
+    await advertModel.deleteOne({ _id: id });
+    const adverts = await advertModel.find();
+    res.send(adverts);
+})
 
 
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Input</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="advertBrand" placeholder="Brand" required>
+        <input type="text" id="advertModel" placeholder="Model" required>
+        <input type="number" id="advertPrice" placeholder="Price" required>
+        <button type="send" >Prideti skelbima</button>
+    </form>
+    <form class="hidden" id="edit-form">
+        <input type="text" id="edit-brand-input" placeholder="Brand" required>
+        <input type="text" id="edit-model-input" placeholder="Model" required>
+        <input type="number" id="edit-price-input" placeholder="Price" required>
+        <button type="send" >Atnaunjinti skelbima</button>
+    </form>
+    <div id="adverts">
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

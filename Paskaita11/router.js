@@ -80,8 +80,8 @@ router.get('/adverts', async (req, res) => {
 })
 
 router.post('/adverts', async (req, res) => {
-    const { brand, model, price, user_id } = req.body;
-    await advertModel.create({ brand, model, price, user_id });
+    const { brand, model, price, description, user_id } = req.body;
+    await advertModel.create({ brand, model, price, description, user_id });
     const adverts = await advertModel.find();
     res.send(adverts);
 });
@@ -99,6 +99,7 @@ router.delete('/adverts/:id', async (req, res) => {
     const adverts = await advertModel.find();
     res.send(adverts);
 })
+
 
 
 

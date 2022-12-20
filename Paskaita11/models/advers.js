@@ -16,6 +16,10 @@ const advertSchema = new mongoose.Schema({
     user_id: {
         type: String,
         required: true
+    },
+    description: {
+     type: String,
+     required: true
     }
 });
 const advertModel = mongoose.model('advert', advertSchema);
